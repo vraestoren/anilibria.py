@@ -14,7 +14,7 @@ class Anilibria:
 
     def generate_captcha(self) -> str:
         return "".join(
-            choices(f"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_-",k=462)).replace("--", "-")
+            choices(f"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_-", k=462)).replace("--", "-")
 
     def login(
             self,
