@@ -1,12 +1,12 @@
-import requests
 from random import choices
+from requests import Session
 
 class Anilibria:
     def __init__(self) -> None:
         self.api = "https://api.anilibria.tv"
         self.public_api = "https://www.anilibria.tv/public"
         self.session_id = None
-        self.session = requests.Session()
+        self.session = Session()
         self.session.headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36",
             "X-Requested-With": "XMLHttpRequest"
@@ -158,10 +158,8 @@ class Anilibria:
             self,
             users: str = None,
             limit: int = 10) -> dict:
-        url = f"{self.api}/v2/getSeedStats?limit={limit}"
-        if users:
-            url = f"{self.api}/v2/getSeedStats?users={users}"
-        return self.session.get(url, headers=self.headers).json()
+        return self.session.get(
+        	f"{self.api}/v2/getSeedStats?users={users}" if users else f"{self.api}/v2/getSeedStats?limit={limit}").json()
 
     def get_rss(
             self,
