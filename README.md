@@ -38,9 +38,9 @@ client.get_schedule(days=0)
 #### Favorites
 ```python
 # Get, add, or remove favorites (requires session)
-client.get_favorite_titles(session="your_session_id")
-client.add_title_to_favorites(session="your_session_id", title_id=123)
-client.delete_title_from_favorites(session="your_session_id", title_id=123)
+client.get_favorite_titles(session="")
+client.add_title_to_favorites(session="", title_id=123)
+client.delete_title_from_favorites(session="", title_id=123)
 ```
 
 #### Misc
