@@ -9,10 +9,10 @@ An Web-API for the [AniLibria](https://www.anilibria.tv) API — a Russian anime
 
 ## Quick Start
 ```python
-import anilibria
+from anilibria import Anilibria
 
-client = anilibria.Anilibria()
-client.login(email="example@gmail.com", password="password")
+anilibria = Anilibria()
+anilibria.login(email="example@gmail.com", password="password")
 ```
 
 ## Usage
@@ -20,33 +20,33 @@ client.login(email="example@gmail.com", password="password")
 #### Search & Browse
 ```python
 # Search for anime
-client.search_anime(search="Наруто")
+anilibria.search_anime(search="Наруто")
 
 # Get anime catalog filtered by year and genre
-client.get_catalog(year=2023, genre="Экшен", season="winter")
+anilibria.get_catalog(year=2023, genre="Экшен", season="winter")
 
 # Get a random title
-client.get_random_title()
+anilibria.get_random_title()
 
 # Get recent updates
-client.get_updates(filter="names,posters", limit=10)
+anilibria.get_updates(filter="names,posters", limit=10)
 
 # Get schedule by day (0 = Monday, 6 = Sunday)
-client.get_schedule(days=0)
+anilibria.get_schedule(days=0)
 ```
 
 #### Favorites
 ```python
 # Get, add, or remove favorites (requires session)
-client.get_favorite_titles(session="")
-client.add_title_to_favorites(session="", title_id=123)
-client.delete_title_from_favorites(session="", title_id=123)
+anilibria.get_favorite_titles(session="")
+anilibria.add_title_to_favorites(session="", title_id=123)
+anilibria.delete_title_from_favorites(session="", title_id=123)
 ```
 
 #### Misc
 ```python
-client.get_feed()
-client.get_youtube_videos(limit=5)
-client.get_team()
-client.get_rss(rss_type="rss")
+anilibria.get_feed()
+anilibria.get_youtube_videos(limit=5)
+anilibria.get_team()
+anilibria.get_rss(rss_type="rss")
 ```
