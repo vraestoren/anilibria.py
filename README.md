@@ -3,7 +3,7 @@
   anilibria.py
 </h1>
 
-> Web-API for the [AniLibria](https://www.anilibria.tv) a Russian anime streaming platform.
+> Web-API for [AniLibria](https://www.anilibria.tv) an Russian anime streaming platform.
 
 
 ## Quick Start
