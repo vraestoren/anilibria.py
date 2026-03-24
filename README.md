@@ -1,11 +1,10 @@
-<div align="center">
+<h1>
+  <img src="https://github.com/user-attachments/assets/e8f4d866-2d21-47ae-a3a9-eefecdf7a04e" width="28" style="vertical-align:middle;" />
+  anilibria.py
+</h1>
 
-# anilibria.py
-<img src="https://anilibria.app/res/images/og_image.jpg?1598792059" width="400"/>
+> Web-API for the [AniLibria](https://www.anilibria.tv) a Russian anime streaming platform.
 
-An Web-API for the [AniLibria](https://www.anilibria.tv) API — a Russian anime streaming platform.
-
-</div>
 
 ## Quick Start
 ```python
