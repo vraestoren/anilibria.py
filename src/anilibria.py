@@ -1,5 +1,5 @@
 from random import choices
-from requests import Session, Response
+from requests import Session
 
 class Anilibria:
 	def __init__(self) -> None:
@@ -12,10 +12,10 @@ class Anilibria:
 			"X-Requested-With": "XMLHttpRequest"
 		}
 
-	def _post(self, endpoint: str, data: dict) -> Response:
+	def _post(self, endpoint: str, data: dict) -> dict:
 		return self.session.post(f"{self.public_api}{endpoint}", json=data).json()
 
-	def _get(self, endpoint: str, params: dict = None) -> Response:
+	def _get(self, endpoint: str, params: dict = None) -> dict:
 		return self.session.get(endpoint, params=params).json()
 
 	def _captcha(self) -> str:
